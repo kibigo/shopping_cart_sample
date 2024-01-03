@@ -10,14 +10,14 @@ function Navbar({cart}){
     return(
         <nav>
 
-            <div>
+            <div className="nav-heading">
                 <h1>Merry Christmas</h1>
             </div>
-            <div>
+            <div className="nav-container">
                 <h4>Home</h4>
                 <h4>Products</h4>
                 <h4>About</h4>
-                <NavLink to="/cart">
+                <NavLink to="/cart" className="cart">
                     <FontAwesomeIcon icon={faCartShopping}/>
                     Cart {cart.length}
                 </NavLink> 
