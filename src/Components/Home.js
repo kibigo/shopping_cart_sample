@@ -5,7 +5,7 @@ function Home({ products, addToCart }) {
     return (
         <div className="home">
             <div className="heading">
-                <h1>Welcome</h1>
+                <h1>Welcome to the new martket</h1>
             </div>
             <div className="container">
 
