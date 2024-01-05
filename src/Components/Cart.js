@@ -6,70 +6,74 @@ function Cart({ cart, setCart, removeFromCart, totalAmount }) {
 
     return (
         <div>
-            <h1>Selected Items</h1>
+            <h1>Selected Items:</h1>
             {cart.length == 0 ? (
                 <p>Your cart is empty</p>
             ) : (
-                <div>
-                    {cart.map((item) => (
-                        <div>
-                            <div>
 
-                                <img src={item.product.thumbnail} />
-                            </div>
-                            <div>
-                                <h1>{item.product.title}</h1>
-                                <p>Price: ${item.product.price}</p>
-                                <p>Quantity: {item.quantity}</p>
-                            </div>
+                <div className="table-container">
+                    
+                    <table className="table">
+                        
+                        <thead>
 
-                            <div>
-                                <button onClick={() => removeFromCart(item.product)}>
-                                    Remove Product
-                                </button>
-                            </div>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cart.map((item) => (
+                                <tr key={item.id}>
+                                    <td> <img className="table-img" src={item.product.thumbnail}/></td>
+                                    <td>{item.product.title}</td>
+                                    <td> ${item.product.price}</td>
+                                    <td className="quantity">
+                                        <button onClick={() => {
+                                            setCart((prevdata) => {
+                                                const updatedQuantity = prevdata.map(
+                                                    (previtem) => previtem.product.id == item.product.id ? {
+                                                        ...previtem, quantity:Math.max(item.quantity - 1, 0)
+                                                    } : previtem
+                                                )
+                                                return updatedQuantity
+                                            })
+                                        }}>
+                                            -
+                                        </button>
 
-                            <div>
-                                <button onClick={() => {
-                                    setCart((prevcart) => {
-                                        const updatedQuantity = prevcart.map(
-                                            (prevItem) => prevItem.product.id == item.product.id ?{
-                                                ...prevItem, quantity: item.quantity + 1
-                                            } : prevItem
-                                        )
-                                        return updatedQuantity
-                                    })
-                                }}>
-                                    +
-                                </button>
+                                        {item.quantity}
 
-                                <button onClick={() => {
-                                    setCart((prevcart) => {
-                                        const updatedQuantity = prevcart.map(
-                                            (prevItem) => prevItem.product.id == item.product.id ? {
-                                                ...prevItem, quantity:Math.max (item.quantity - 1, 0)
-                                            } : prevItem
-                                        )
-                                        return updatedQuantity
-                                    })
-                                }}>
-                                    -
-                                </button>
-                            </div>
-
-
-
-                        </div>
-
-
-                    ))}
-                    <div>
-                        <div>
-                            <p>Total Amount: ${totalAmount()}</p>
-                        </div>
-                    </div>
+                                        <button onClick={() => {
+                                            setCart((prevdata) => {
+                                                const updatedQuantity = prevdata.map(
+                                                    (previtem) => previtem.product.id == item.product.id ? {
+                                                        ...previtem, quantity: item.quantity + 1
+                                                    } : previtem
+                                                )
+                                                return updatedQuantity
+                                            })
+                                        }}>
+                                            +
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button onClick={() => removeFromCart(item.product)}>
+                                            Remove
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                            ))}
+                            <tr>
+                                Total: ${totalAmount()}
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-
 
             )}
 

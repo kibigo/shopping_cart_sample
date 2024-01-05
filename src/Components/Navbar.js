@@ -11,7 +11,7 @@ function Navbar({cart}){
         <nav>
 
             <div className="nav-heading">
-                <h1>Merry Christmas</h1>
+                <h1>Quikmart</h1>
             </div>
             <div className="nav-container">
                 <h4>Home</h4>

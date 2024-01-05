@@ -71,6 +71,7 @@ nav{
   color: blueviolet;
   justify-content: center;
   display: flex;
+  background-color: chocolate;
 }
 
 .container{
@@ -91,4 +92,38 @@ nav{
   border-radius: 10px;
   width: 300px;
   height: 200px;
+}
+
+/* STYLING CART COMPONENT */
+
+.table-container{
+  width: 70%;
+  margin: auto;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FCF6F5FF;
+}
+
+.table th, td{
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.table th{
+  background-color: #ADEFD1FF;
+}
+
+.table-img{
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.quantity button{
+  margin: 10px;
+  background-color: #006B38FF;
 }
