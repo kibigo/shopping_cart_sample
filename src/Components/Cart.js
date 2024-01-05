@@ -68,8 +68,14 @@ function Cart({ cart, setCart, removeFromCart, totalAmount }) {
                                 </tr>
                                 
                             ))}
-                            <tr>
-                                Total: ${totalAmount()}
+                            <tr className="totalAmount">
+                                <td className="empty"></td>
+                                <td className="empty"></td>
+                                <td className="empty"></td>
+                                <td className="empty"></td>
+                                <td>
+                                    Total: ${totalAmount()}
+                                </td>
                             </tr>
                         </tbody>
                     </table>
