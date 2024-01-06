@@ -139,3 +139,147 @@ nav{
   border: none;
 }
 
+/* STYLING ABOUT PAGE */
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FCF6F5FF;
+  width: 100%;
+  height: auto;
+}
+
+.about-us{
+  text-align: center;
+  color: #963CBDFF;
+  padding: 10px;
+}
+
+.about-company{
+  text-align: center;
+}
+
+.about-company p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-section{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10%;
+  margin-top: 50px;
+  max-width: 2000px;
+  margin-left: 10%;
+}
+
+
+
+.first-section-image img{
+  max-width: 100%;
+  height: auto;
+}
+
+.first-section-content{
+  padding: 10px;
+  
+}
+
+.first-section-content h4{
+  color: blue;
+  
+}
+
+.stats{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-right: 30%;
+  
+
+}
+
+
+.second-section{
+  margin-top: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+.paragraph p{
+  font-size: large;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.logos{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logos img{
+  width: 150px;
+  height: 125px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.third-section{
+  text-align: center;
+}
+
+.description{
+  width: auto;
+}
+.description h4{
+  color: blue;
+}
+
+.description h2{
+  font-size: 175%;
+}
+
+.about-button{
+  border-radius: 5px;
+  margin: 10px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+.open-button{
+  border-radius: 5px;
+  background-color: #00239CFF;
+  color: #FCF6F5FF;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.fourth-section{
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.values h4{
+  color: blue;
+
+}
+
+.values h2{
+  font-size: 180%;
+}
+
+.values p{
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.value-boxes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
