@@ -1,8 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import About from "./About";
 
 
 function Navbar({cart}){
@@ -14,9 +15,13 @@ function Navbar({cart}){
                 <h1>Quikmart</h1>
             </div>
             <div className="nav-container">
-                <h4>Home</h4>
+                <Link to="/">
+                    Home
+                </Link>
                 <h4>Products</h4>
-                <h4>About</h4>
+                <Link to='/about'>
+                    About
+                </Link>
                 <NavLink to="/cart" className="cart">
                     <FontAwesomeIcon icon={faCartShopping}/>
                     Cart {cart.length}

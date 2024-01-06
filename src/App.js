@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Cart from './Components/Cart';
+import About from './Components/About';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
 
           <Route path='/' element={<Home products={products} addToCart={addProduct}/>}/>
           <Route path='/cart' element={<Cart cart={cart} setCart={setCart} removeFromCart={removeFromCart} totalAmount = {totalAmount}/>}/>
+          <Route path='/about' element={<About />}/>
 
         </Routes>
 
