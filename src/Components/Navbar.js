@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import About from "./About";
+import SearchBar from "./SearchBar";
 
 
-function Navbar({cart}){
+function Navbar({ cart, products, setProducts }) {
 
-    return(
+    return (
         <nav>
 
             <div className="nav-heading">
@@ -22,10 +23,17 @@ function Navbar({cart}){
                 <Link to='/about'>
                     About
                 </Link>
+
+            </div>
+
+            <div>
+                <SearchBar products={products} setProducts={setProducts}/>
+            </div>
+            <div>
                 <NavLink to="/cart" className="cart">
-                    <FontAwesomeIcon icon={faCartShopping}/>
+                    <FontAwesomeIcon icon={faCartShopping} />
                     Cart {cart.length}
-                </NavLink> 
+                </NavLink>
             </div>
         </nav>
     )

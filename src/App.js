@@ -63,7 +63,7 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-        <Navbar cart={cart} />
+        <Navbar cart={cart} products={products} setProducts={setProducts}/>
         <Routes>
 
           <Route path='/' element={<Home products={products} addToCart={addProduct}/>}/>
